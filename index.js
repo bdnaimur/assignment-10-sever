@@ -36,7 +36,8 @@ app.get('/pithaUser', (req, res) => {
   pithaUserCollection.find({email: req.query.email})
   .toArray((err, items) => {
     console.log(items)
-      res.send(items)
+    res.redirect('/pithaUser')
+    res.send(items)
   })    
 })
 
